@@ -4,8 +4,6 @@ import {
   Navigate,
   Route,
   Routes,
-  replace,
-  useNavigate,
 } from "react-router-dom";
 import { Login } from "./components/Login";
 import { Dash } from "./components/Dash";
@@ -17,7 +15,6 @@ import { Home } from "./components/Home";
 export const Session = createContext(null);
 
 function App() {
-  const navigate = useNavigate();
   const [username, setUsername] = useState(
     () => localStorage.getItem("username") || null
   );
